@@ -14,5 +14,7 @@
 (define (sum-up-numbers-simple L)
   (cond
     ((null? L) 0)
-     (else (number? ((cons '+ L)))
-   )))
+     (else (number? (car L))
+           (+ (sum-up-numbers-simple(cdr L))
+           (+ (car L) (sum-up-numbers-simple (cdr L)))
+   ))))
