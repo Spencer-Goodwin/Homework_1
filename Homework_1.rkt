@@ -1,4 +1,4 @@
-//Function number one
+;//Function number one
 (define (reverse-general L)
   (cond ((null? L) '())
         ((list? L)
@@ -10,7 +10,9 @@
         )
   )
 
-//Function number two
+;//Function number two
 (define (sum-up-numbers-simple L)
   (cond
-    ((cond
+    ((null? L) 0)
+     (else (number? ((cons '+ L)))
+   )))
