@@ -23,7 +23,10 @@
          ((list? (car L))(sum-up-numbers-general (car L)))
          ((number? (car L))
          (+ (car L) (sum-up-numbers-general (cdr L)))) ((sum-up-numbers-general (cdr L)))))
-         
-        
+;//Function number four
+Read in the numbers in L2 First
+L1 has to be greater than the smallest number in L2
+        The result is the smallest number in L2
+thats greater than the smallest number in L2
              
         
