@@ -19,9 +19,9 @@
          (+ (car L) (sum-up-numbers-simple (cdr L)))) ((sum-up-numbers-simple (cdr L)))))
 ;//Function number three
 (define (sum-up-numbers-general L)
-  (cond ((null? L) 0)
-        ((not(number? (car L)))
-         (sum-up-numbers-simple(car L)))))
+  (cond ((not(number? (car L)))
+         (sum-up-numbers-simple(car L)))
+        (not(null? L)sum-up-numbers-simple L)))
         
              
         
