@@ -29,8 +29,8 @@
   (cond
     ((null? L2) min L1)
     ((null? L1) #F)
-    ((<(min L2)(car L1))
-    ((number? (car L1))(min-above-min (car L1) L2)(min L2)
+    ((<(min L2)(car L1))car L1)
+    ((not(number? (car L1)))(min-above-min (cdr L1)))
      
      ;(Let ((L2s)(min L2))
              
