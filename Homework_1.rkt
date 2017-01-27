@@ -24,9 +24,14 @@
          ((number? (car L))
          (+ (car L) (sum-up-numbers-general (cdr L)))) ((sum-up-numbers-general (cdr L)))))
 ;//Function number four
-Read in the numbers in L2 First
-L1 has to be greater than the smallest number in L2
-        The result is the smallest number in L2
-thats greater than the smallest number in L2
+
+(define (min-above-min L1 L2)
+  (cond
+    ((null? L2) min L1)
+    ((null? L1) #F)
+    ((<(min L2)(car L1))
+    ((number? (car L1))(min-above-min (car L1) L2)(min L2)
+     
+     ;(Let ((L2s)(min L2))
              
         
