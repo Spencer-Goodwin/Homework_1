@@ -24,17 +24,20 @@
          ((number? (car L))
          (+ (car L) (sum-up-numbers-general (cdr L)))) ((sum-up-numbers-general (cdr L)))))
 ;//Function number four
-(define (_min L2)
+(define (_min  m L2)
       (cond
-        ((null? (car L2)) 0)
-        ((<(car L2)0) (_min(car L2)(cdr L2)))))
+      
+        ((null? (car L2)) m)
+        ((<(car L2) m) (_min(car L2)(cdr L2)))
+        (t (_min m (cdr L2)))))
 (define (min-above-min L1 L2)
   (cond
-    ((null? L2) min L1)
+    ((null? L2) (_min `(1000)(L1)))
     ((null? L1) #F)
-    
+    (_min `(1000) (L2))
     ((number? (car L1));)(min-above-min (cdr L1)))
-    (<(_min L2)(car L1)))));car L1)))
+    (<(_min L2)(car L1)))((min-above-min (cdr L1)(cdr L2)))))
+    ));car L1)))
      
      ;(Let ((L2s)(min L2))
              
