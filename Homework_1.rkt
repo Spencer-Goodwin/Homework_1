@@ -20,5 +20,6 @@
 ;//Function number three
 (define (sum-up-numbers-general L)
   (cond ((null? L) 0)
+        ((list? L(sum-up-numbers-general L))
         ((number? (car L))
          (+ (car L) (sum-up-numbers-general (cdr L)))) ((sum-up-numbers-general (cdr L)))))
